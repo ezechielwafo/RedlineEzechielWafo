@@ -18,7 +18,7 @@
 .carousel-caption {position: inherit;}
 .carousel-indicators {display: none;}
 .about .about-box h2 {
-    padding: 0;
+    padding: 2;
     text-decoration-color: #020d0f;
     line-height: 70px;
     font-size: 70px;
