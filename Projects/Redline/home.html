@@ -8,34 +8,43 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-</head>
+
+  </head>
 <body>
     <section id="debut">
-      <div class="container-fluid" style="height:89vh";>
+      <div class="container-fluid" style="height:90vh";>
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
              data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
-              <a class="navbar-brand" href="#" style="margin-left: 100px;"><span style="color: rgb(252, 67, 64);">ALLEZ</span>CINE</a>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item decale">
-                   
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true" style="font-weight: 100px;">contact</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+            <div class="collapse navbar-collapse" id="navbars" >
+              <span style="color: rgb(252, 67, 64);">ALLEZ</span>CINE
             </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle"  style="border: 3px;">
+                  choice
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" >all</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">films</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">series</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            
           </div>
         </nav>
         <div class="carousel-caption" style="margin-top:100px">
@@ -43,9 +52,9 @@
             <div class="col-md-12">
               <div class="text-bg"><br/><br/>
                 <span>LATES <span style="color: rgb(252, 67, 64);">ON</span> LINE <span style="color: rgb(252, 67, 64);">MO</span>VIES</span><br/><br/>
-                <h3>Tout les films et serie d'actualite</h3><br/><br/><br/>
+                <h3>Tout les films et serie d'actualite</h3><br/>
                 <p></p>
-                <button class="btn btn-success"><a href="#films">Regarder</a></button>
+                <button class="btn btn1"><a href="#films">Regarder</a></button>
               </div>
             </div>
           </div>
@@ -53,12 +62,51 @@
       </div>
       </div>
       <div class="modal-footer">
-        <div class="row" style="background-color:  rgb(252, 67, 64);  width:10000px; height:50px">
-          <div class="col-1" style="margin-top:15px;"><button>Login</button> </div>
-          <div class="col-1" style="margin-top:15px;"> <button>register</button>
+        <div class="row" style="background-color:  rgb(252, 67, 64);    width: 100%;; height:50px">
+          <div class="col-3" style="margin-top: 10px;">
+            <a href="login.html"><button class="btns">Login</button> </a> 
+            <a href="creer.html"><button class="btns">register</button></a> 
+        </div>
             <div class="col-10"></div>
           </div></div>
     </section>
+    <!--image serie !-->
+    <section>
+      <div class="row" style="margin-top: 20px;">
+     <div class="col-2"></div>
+          <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/flash.jpg" alt="">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-2">
+          <div class="card" style="width: 11rem;">
+            <img src="img/ama/flash1.jpg" alt="">
+              <div class="card-body">
+                <p class="card-text">My God is still the same - Sanctus Real lyrics video </div>
+            </div>
+      </div>
+      <div class="col-2">
+          <div class="card" style="width: 11rem;">
+            <img src="img/ama/flash2.jpg" alt="">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style="width: 11rem;">
+          <img src="img/ama/flash3.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+</div>
+    </section>
+   <!--all serie !-->
 <section>
   <div class="container-fluid modifier" >
 <div id="films" class="row">
@@ -92,10 +140,7 @@
         </div>
         <div class="col-2">
           <div class="card" style="width: 11rem;">
-            <iframe src="https://www.youtube.com/embed/yUZEF8jZsHo?si=mIw1_yJFDbXO1A4k"
-             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-             encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <img src="img/ama/flash.jpg" alt="">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
@@ -103,21 +148,14 @@
     </div>
     <div class="col-2">
         <div class="card" style="width: 11rem;">
-            <iframe src="https://www.youtube.com/embed/tLP6-M_EQN0?list=RDSNNTVD_dTxU" 
-            title="My God is still the same - Sanctus Real lyrics video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-            picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <img src="img/ama/flash1.jpg" alt="">
             <div class="card-body">
               <p class="card-text">My God is still the same - Sanctus Real lyrics video </div>
           </div>
     </div>
     <div class="col-2">
         <div class="card" style="width: 11rem;">
-            <iframe src="https://www.youtube.com/embed/bhZKHBIPYPA?si=xyWFZRoWMpcIblSk" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture; web-share"
-             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <img src="img/ama/flash2.jpg" alt="">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
@@ -126,10 +164,7 @@
 
     <div class="col-2">
         <div class="card" style="width: 11rem;">
-            <iframe src="https://www.youtube.com/embed/bhZKHBIPYPA?si=xyWFZRoWMpcIblSk" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture; web-share"
-             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <img src="img/ama/flash3.jpg" alt="">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
@@ -362,6 +397,46 @@
         </div>
     </div>
   </section>
+
+  <script>
+    function setCookie(nom, valeur, expire, chemin, domaine, securite) {
+        document.cookie = nom + '=' + escape(valeur) +
+            ((expire == undefined) ? '' : ('; expires=' + expire.toGMTString())) +
+            ((chemin == undefined) ? '' : ('; path=' + chemin)) +
+            ((domaine == undefined) ? '' : ('; domain=' + domaine)) +
+            ((securite == true) ? '; secure' : '');
+    }
+
+    // Définir la date d'expiration du cookie
+    var dtExpire = new Date();
+    dtExpire.setTime(dtExpire.getTime() + 3600 * 1000); // 1 heure
+
+    // Créer le cookie
+    setCookie('myCookie', 'développement web', dtExpire, '/');
+    
+    // Fonction pour lire le cookie
+    function lireCookie(nom) {
+        const nomEQ = nom + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nomEQ) === 0) return unescape(c.substring(nomEQ.length, c.length));
+        }
+        return null;
+    }
+
+    // Vérifier si le cookie a été créé
+    window.onload = function() {
+        const valeurCookie = lireCookie('myCookie');
+        if (valeurCookie) {
+            console.log("Valeur du cookie : " + valeurCookie);
+        } else {
+            console.log("Le cookie n'a pas été trouvé.");
+        }
+    } 
+</script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
       crossorigin="anonymous">
