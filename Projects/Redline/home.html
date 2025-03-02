@@ -11,6 +11,9 @@
 
   </head>
 <body>
+  <!-- cookies!-->
+ 
+<!-- cookies!-->
     <section id="debut">
       <div class="container-fluid" style="height:90vh";>
         <nav class="navbar navbar-expand-lg">
@@ -397,46 +400,87 @@
         </div>
     </div>
   </section>
+  
 
   <script>
-    function setCookie(nom, valeur, expire, chemin, domaine, securite) {
-        document.cookie = nom + '=' + escape(valeur) +
-            ((expire == undefined) ? '' : ('; expires=' + expire.toGMTString())) +
-            ((chemin == undefined) ? '' : ('; path=' + chemin)) +
-            ((domaine == undefined) ? '' : ('; domain=' + domaine)) +
-            ((securite == true) ? '; secure' : '');
-    }
-
-    // Définir la date d'expiration du cookie
-    var dtExpire = new Date();
-    dtExpire.setTime(dtExpire.getTime() + 3600 * 1000); // 1 heure
-
-    // Créer le cookie
-    setCookie('myCookie', 'développement web', dtExpire, '/');
-    
-    // Fonction pour lire le cookie
-    function lireCookie(nom) {
-        const nomEQ = nom + "=";
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nomEQ) === 0) return unescape(c.substring(nomEQ.length, c.length));
-        }
-        return null;
-    }
-
-    // Vérifier si le cookie a été créé
-    window.onload = function() {
-        const valeurCookie = lireCookie('myCookie');
-        if (valeurCookie) {
-            console.log("Valeur du cookie : " + valeurCookie);
-        } else {
-            console.log("Le cookie n'a pas été trouvé.");
-        }
-    } 
 </script>
-  
+
+<section class="clignote">
+  <div class="container action">
+    <div class="row">
+      <div class="col-1">
+        <img src="img/ama/cookie.jpg">
+      </div>
+      <div class="col-2">
+        <h4>Cookies</h4>  
+
+      </div>
+
+    </div>
+    <p >Voules-vous avoir plus d'information sur nos produit et reductions pendant<br>   les periode de promos</p>
+    <button class="btn btn-success btn10">accepter</button><button class="btn btn-danger btn11">refuser</button>
+  </div>
+   <!-- style du cookies-->
+   <style> 
+    .action{
+      position: fixed; 
+      top: 53%;
+      left: -40%; 
+      z-index: 1; 
+      padding: 10px; 
+    }
+    .action h5{
+      color: rgb(0, 0, 0);
+      font-size: 0.5cm;
+    }
+    .active{
+      left:0%;
+    }
+    .action h4 {
+     margin-left:  3cm;
+     color: rgb(0, 0, 0);
+     font-size: 0.8cm;
+    }
+    .action img{
+      width: 100px;
+      border-radius: 1cm;
+    }
+    .action{
+      background-color:  rgb(255, 255, 255);
+      width: 7cm;
+      border-radius: 1cm;
+      
+    }
+    .action .btn10{
+    margin-left: 0.5cm;
+    }
+    .action .btn11{
+      margin-left: 0.5cm;
+      }    
+      
+      .clignotant {
+        animation:clinfinite; /* durée de l'animation et répétition infinie */
+      }
+  </style>
+  <!-- script du cookies-->
+ <script>
+const cokie =document.querySelector('.action')
+      btn10 = document.querySelector('.btn10')
+      btn11 = document.querySelector('.btn11')
+      window.addEventListener('load',()=>{
+      cokie.classList.add('active');
+      btn10.addEventListener('click',()=>{
+        cokie.classList.remove('active');
+        localStorage.setItem('mange',50);
+        localStorage.setItem('banane',5100);
+      })
+      btn11.addEventListener('click',()=>{
+        cokie.classList.remove('active');
+      })
+    })
+
+ </script>
+ </section> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
       crossorigin="anonymous">
