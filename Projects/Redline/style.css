@@ -8,11 +8,12 @@
 #navbars
 {
    color: white;
-    font-size: 40px;
-    font-weight: 10000px;
-
+    font-size: 45px;
+    font-weight: 100000px;
+    
 }
-.navbar-brand{
+.navbar-brand
+{
     font-size: larger;
     font-style: normal;
     margin-left: 300px;
@@ -30,7 +31,7 @@
  .text-bg span {
     font-size: 80px;
     font-weight: 100px;
-line-height: 10px;
+    line-height: 10px;
 /* color: rgb(252, 67, 64);; */
 text-transform: uppercase;
  }
@@ -119,14 +120,10 @@ border: solid 2px;
     .btn:hover {
         background-color: darkgray; /* Changement de couleur au survol */
     }
-body {
-    background-image: url(img/ama/bg.jpg);
-    background-repeat: repeat;
-    
-}
-.nav-link{ 
+.decodage .nav-link{ 
     color: #f3f5f5;
 font-size: 60px;
+color: red;
 }
 .login-card {
     background-color: #252631;
@@ -167,7 +164,4 @@ font-size: 60px;
   .login-card .form-control::placeholder {
     color: #bbbbbb;
     font-weight: 400; 
-}
-
-
-  
+} 

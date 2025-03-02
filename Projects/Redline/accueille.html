@@ -9,7 +9,14 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        body {
+            background-image: url(img/ama/bg.jpg);
+            background-repeat: repeat;
+            
+        }
+    </style>
+    
 </head>
 <body>
 <header id="header">
@@ -53,10 +60,13 @@
         console.log(typeof(v1),'frfrfrf',v1,v1.length)
         
         if(v1 <= 18){
-            alert("Nous somme desole masi vous ne pouvez pas acceder au site")
+            alert("Nous somme desole mais vous ne pouvez pas acceder au site")
+        } else if (saisie === ''){
+            alert("Nous somme desole mais vous ne pouvez pas acceder au site")
         }
         else{
             window.location.href="home.html"
+            window.close('accueille.html')
         }
     }
     </script>

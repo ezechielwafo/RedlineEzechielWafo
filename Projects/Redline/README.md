@@ -70,12 +70,12 @@ Un **menu** en bootstrap avec des sous-menus. (**Menu hamburger pour le responsi
 Comme c’est une onepage, les liens du menu doivent pointer vers les sections dédiées.
 
 ### En-tête
-
-Le **jumbotron** de l'entête doit faire 100% de la largeur de l'écran dans lequel il y a un slide (Cf layout). Faire fonctionner le **slide** en CSS ou en JS ou jQuery)
+<!-- 
+Le **jumbotron** de l'entête doit faire 100% de la largeur de l'écran dans lequel il y a un slide (Cf layout). Faire fonctionner le **slide** en CSS ou en JS ou jQuery) -->
 
 ### Les boutons réseaux sociaux
-
-Les **boutons de réseaux sociaux** sont en position fixe. Si on clique sur un bouton, il doit s’allonger avec une animation (ici utilisez juste du CSS).
+<!-- 
+Les **boutons de réseaux sociaux** sont en position fixe. Si on clique sur un bouton, il doit s’allonger avec une animation (ici utilisez juste du CSS). -->
 
 ### Section Films
 
