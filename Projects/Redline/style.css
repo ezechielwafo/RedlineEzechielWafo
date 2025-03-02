@@ -1,9 +1,26 @@
-#debut{  
+.debut1{  
     background-image: url(img/ama/thor.jpg);
     background-size:cover;
     background-repeat: no-repeat; 
     background-position: center; 
     opacity: 1;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.debut2{
+  background-image: url(img/ama/thor1.jpg);
+  background-size:cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.debut3{
+  background-image: url(img/ama/thor2.jpg);
+  background-size:cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+   opacity: 1;
 }
 #navbars
 {
@@ -165,3 +182,20 @@ color: red;
     color: #bbbbbb;
     font-weight: 400; 
 } 
+
+
+
+section .debut1{
+  background-color: #2f3235; 
+}
+
+
+.navbar #navbarScroll{
+  background-color: rgba(27, 27, 27, 0.5); /* Couleur blanche avec 50% de transparence */
+  color: #f3f5f5;
+  position: fixed; /* Pour que la barre reste en haut lors du défilement */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  z-index: 1000; /* Pour s'assurer qu'elle est au-dessus des autres éléments */
+  margin-left: 19cm;
+  font-size: 0.7cm;
+}
