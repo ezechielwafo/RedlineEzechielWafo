@@ -199,3 +199,19 @@ section .debut1{
   margin-left: 19cm;
   font-size: 0.7cm;
 }
+.visible{
+  opacity: 1;
+}
+.visible2 {
+  position: fixed; 
+  left: -40%; 
+
+}
+
+
+.verification{
+  opacity: 0;
+}
+.verification1{
+  opacity:1;
+}

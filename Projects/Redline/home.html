@@ -10,100 +10,185 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function recuperation() {
+        let saisie = document.getElementById("age").value;
+    
+        if (saisie === '') {
+            alert("Veuillez entrer votre année de naissance");
+            return;
+        }
+    
+        const v1 = 2025 - saisie;
+    
+        if (v1 <= 18) {
+            alert("Nous sommes désolés mais vous ne pouvez pas accéder au site");
+            return; 
+        }
+    
+        const select = document.querySelector('.visible');
+        const  verif = document.querySelector('.verification')
+        if (select) {
+            select.classList.remove('visible');
+            select.classList.add('visible2');
+            verif.classList.remove('verification');
+            verif.classList.add('verification1');
+            
+        }
+   
+    }
+
+    </script> 
   </head>
+
  <body>
-  <script>
-     window.open('accueille.html', '_blank'); 
-  </script>  
-    <section class="debut1">
-     
-      <div class="container-fluid" style="height:90vh";>
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-             data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbars" >
-              <span style="color: rgb(252, 67, 64);">ALLEZ</span>CINE
-            </div>
-                  <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color: aliceblue;">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#contact" style="color: rgb(255, 249, 249);">contacter</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#te" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: aliceblue;">
-                          Link
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#series" style="color: aliceblue;">Action</a></li>
-                          <li><a class="dropdown-item" href="#all" style="color: aliceblue;">all</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="regarder" style="color: aliceblue;">Telecharger</a></li>
+  <section id="hero" class="visible">
+      <div class="container">
+          <div class="card login-card position-relative">
+              <div class="card-body">
+                  <h4 class="text-center text-white" >Acces au site</h4>
+                  <label for="" style="color: aliceblue;" >Annee de naissance</label>    
+                  <div class="form-group">
+                          <input placeholder="Annee de naissance" id="age" style="border-radius: 10px;">
+                      </div>
+                      <div class="row">
+                          <div class="col ">
+                         <button class="btn btn-success" onclick="recuperation()">connexion</button>
+                          </div>
+                          <div class="col-3"></div>
+                      </div>
+              </div>
+          </div>
+      </div>
+    
+  </section>
+  <!-- verification -->
+ <section class="verification">
+           <section class="debut1">
+        
+          <div class="container-fluid" style="height:90vh";>
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars" >
+                  <span style="color: rgb(252, 67, 64);">ALLEZ</span>CINE
+                </div>
+                      <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="color: aliceblue;">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#contact" style="color: rgb(255, 249, 249);">contacter</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#te" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: aliceblue;">
+                              Link
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#series" style="color: aliceblue;">Action</a></li>
+                              <li><a class="dropdown-item" href="#all" style="color: aliceblue;">all</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="regarder" style="color: aliceblue;">Telecharger</a></li>
+                            </ul>
+                          </li>
                         </ul>
-                      </li>
-                    </ul>
-                    <form class="d-flex" role="search" style="margin-right:20cm">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                        <form class="d-flex" role="search" style="margin-right:20cm">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+                    </div>
+                  </nav>
+            <div class="carousel-caption" style="margin-top:100px">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="text-bg"><br/><br/>
+                    <span>LATES <span style="color: rgb(252, 67, 64);">ON</span> LINE <span style="color: rgb(252, 67, 64);">MO</span>VIES</span><br/><br/>
+                    <h3>Tout les films et serie d'actualite</h3><br/>
+                    <p></p>
+                    <button class="btn btn1"><a href="#regarder">Regarder</a></button>
                   </div>
                 </div>
-              </nav>
-                </div>
-              </nav>
-        <div class="carousel-caption" style="margin-top:100px">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="text-bg"><br/><br/>
-                <span>LATES <span style="color: rgb(252, 67, 64);">ON</span> LINE <span style="color: rgb(252, 67, 64);">MO</span>VIES</span><br/><br/>
-                <h3>Tout les films et serie d'actualite</h3><br/>
-                <p></p>
-                <button class="btn btn1"><a href="#regarder">Regarder</a></button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      </div>
-      <div class="modal-footer">
-        <div class="row" style="background-color:  rgb(252, 67, 64);    width: 100%;; height:50px">
-          <div class="col-3" style="margin-top: 10px;">
-            <a href="login.html"><button class="btns">Login</button> </a> 
-            <a href="creer.html"><button class="btns">register</button></a> 
-        </div>
-            <div class="col-10"></div>
-          </div></div>
-    </section>
-    <!--image serie !-->
-    <section >
-    <div class="row" style="margin-top: 20px;">
-     <div class="col-2"></div>
-      <div class="col-2">
-        <div class="card" style="width: 11rem;">
-          <img src="img/ama/flash.jpg" alt="">
-          <div class="card-body">
-          <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-          <div class="row" style="color: green;"> 
-          <div class="col">
-          <h6 style="font-size:15px;">2024</h6>
           </div>
-          <div class="col">
-          <h6 style="font-size:15px;">aventure</h6>
+          <div class="modal-footer">
+            <div class="row" style="background-color:  rgb(252, 67, 64);    width: 100%;; height:50px">
+              <div class="col-3" style="margin-top: 10px;">
+                <a href="login.html"><button class="btns">Login</button> </a> 
+                <a href="creer.html"><button class="btns">register</button></a> 
+            </div>
+                <div class="col-10"></div>
+              </div></div>
+        </section>
+        <!--image serie !-->
+        <section >
+        <div class="row" style="margin-top: 20px;">
+        <div class="col-2"></div>
+          <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/flash.jpg" alt="">
+              <div class="card-body">
+              <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+              <div class="row" style="color: green;"> 
+              <div class="col">
+              <h6 style="font-size:15px;">2024</h6>
+              </div>
+              <div class="col">
+              <h6 style="font-size:15px;">aventure</h6>
 
-          </div>
-          </div>
+              </div>
+              </div>
 
+              </div>
+            </div>
           </div>
+          <div class="col-2">
+              <div class="card" style="width: 11rem;">
+                <img src="img/ama/thor.jpg" alt="" style="height: 7cm;">
+                  <div class="card-body">
+                    <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                    <div class="row" style="color: green;"> 
+                      <div class="col">
+                        <h6 style="font-size:15px;">2024</h6>
+                      </div>
+                      <div class="col">
+                        <h6 style="font-size:15px;">aventure</h6>
+
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+          </div>
+          <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/flash2.jpg" alt="">
+                <div class="card-body">
+                  <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                  <div class="row" style="color: green;"> 
+                    <div class="col">
+                      <h6 style="font-size:15px;">2024</h6>
+                    </div>
+                    <div class="col">
+                      <h6 style="font-size:15px;">aventure</h6>
+
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
         </div>
-      </div>
-      <div class="col-2">
-          <div class="card" style="width: 11rem;">
-            <img src="img/ama/thor.jpg" alt="" style="height: 7cm;">
+          <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/thor.jpg" alt="" style="height: 7cm;">
               <div class="card-body">
                 <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
                 <div class="row" style="color: green;"> 
@@ -115,13 +200,177 @@
 
                   </div>
                 </div>
-               
+              
               </div>
-            </div>
+              </div>
       </div>
-      <div class="col-2">
-        <div class="card" style="width: 11rem;">
-          <img src="img/ama/flash2.jpg" alt="">
+        </section>
+      <!--all serie !-->
+    <section id="all">
+      <div class="container-fluid modifier" >
+    <div id="films" class="row">
+      <span class="border-start" style="margin-top: 10px;">
+        <h1 style="border-left: 4px solid red"> <span style="color:  rgb(252, 67, 64);">NE</span>W series</h1>
+      </span>
+        <div class="row ">
+          <div class="col-2"></div>
+          <div class="col-5 deplace">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary recup" style="border-left: 4px solid rgb(185, 19, 19)">
+                <a class="navbar-brand" href="#all"  style="background-color: rgb(252, 67, 64);">ALL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#series">Series</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#regarder">ACTION</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+          </div>
+          <div class="col"></div>
+        </div>
+      
+        <div class="col-2">  
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 11rem;">
+                <img src="img/ama/flash.jpg" alt="">
+                <div class="card-body">
+                  <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                  <div class="row" style="color: green;"> 
+                    <div class="col">
+                      <h6 style="font-size:15px;">2024</h6>
+                    </div>
+                    <div class="col">
+                      <h6 style="font-size:15px;">aventure</h6>
+
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+        </div>
+        <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/thor2.jpg" alt="" style="height: 7cm;">
+              <div class="card-body">
+                <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                <div class="row" style="color: green;"> 
+                  <div class="col">
+                    <h6 style="font-size:15px;">2024</h6>
+                  </div>
+                  <div class="col">
+                    <h6 style="font-size:15px;">aventure</h6>
+
+                  </div>
+                </div>
+              
+              </div>
+        </div>
+        </div>
+        <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/flash2.jpg" alt="">
+              <div class="card-body">
+                <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                <div class="row" style="color: green;"> 
+                  <div class="col">
+                    <h6 style="font-size:15px;">2024</h6>
+                  </div>
+                  <div class="col">
+                    <h6 style="font-size:15px;">aventure</h6>
+
+                  </div>
+                </div>
+              
+              </div>
+              </div>
+        </div>
+
+        <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/flash.jpg" alt="" style="height: 7cm;">
+              <div class="card-body">
+                <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                <div class="row" style="color: green;"> 
+                  <div class="col">
+                    <h6 style="font-size:15px;">2024</h6>
+                  </div>
+                  <div class="col">
+                    <h6 style="font-size:15px;">aventure</h6>
+
+                  </div>
+                </div>
+              
+              </div>
+              </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" style="background-color: red; border: raduis 20px;
+      margin-right:605px;">
+        <a href="#series">PLUS DE FILMS</a></button>
+    </div>
+    </section>
+    <!-- features series Tv !-->
+    <section>
+      <div class="container-fluid modifier" >
+    <div id="series" class="row">
+        <span class="border-start">
+        <h1 style="border-left: 4px solid red"> <span style="color:  rgb(252, 67, 64);">Feat</span>ures series TV</h1>
+        </span>
+        <div class="row ">
+          <div class="col-2"></div>
+          <div class="col-5 deplace">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary recup" style="border-left: 4px solid rgb(185, 19, 19)">
+                <a class="navbar-brand" href="#series" >ALL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#regarder">Acheter</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#regarder">ACTION</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+          </div>
+          <div class="col"></div>
+        </div>
+      
+        <div class="col-2">  
+            </div>
+          <div class="col-2">
+              <div class="card" style="width: 11rem;">
+                <img src="img/ama/thor.jpg" alt="" style="height: 7cm;">
+                <div class="card-body">
+                  <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                  <div class="row" style="color: green;"> 
+                    <div class="col">
+                      <h6 style="font-size:15px;">2024</h6>
+                    </div>
+                    <div class="col">
+                      <h6 style="font-size:15px;">aventure</h6>
+      
+                    </div>
+                  </div>
+                
+                </div>
+                </div>
+        </div>
+          <div class="col-2">
+            <div class="card" style="width: 11rem;">
+          <img src="img/ama/flash.jpg">
             <div class="card-body">
               <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
               <div class="row" style="color: green;"> 
@@ -133,13 +382,73 @@
 
                 </div>
               </div>
-             
+            
+            </div>
             </div>
           </div>
-    </div>
-      <div class="col-2">
-        <div class="card" style="width: 11rem;">
-          <img src="img/ama/thor.jpg" alt="" style="height: 7cm;">
+          <div class="col-2">
+          <div class="card" style="width: 11rem;">
+            <img src="img/ama/thor1.jpg" alt="" style="height: 7cm;">
+            <div class="card-body">
+              <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+              <div class="row" style="color: green;"> 
+                <div class="col">
+                  <h6 style="font-size:15px;">2024</h6>
+                </div>
+                <div class="col">
+                  <h6 style="font-size:15px;">aventure</h6>
+
+                </div>
+              </div>
+            
+            </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+          <div class="card" style="width: 11rem;">
+            <img src="img/ama/flash3.jpg" alt="">
+            <div class="card-body">
+              <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+              <div class="row" style="color: green;"> 
+                <div class="col">
+                  <h6 style="font-size:15px;">2024</h6>
+                </div>
+                <div class="col">
+                  <h6 style="font-size:15px;">aventure</h6>
+
+                </div>
+              </div>
+            
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- plus de !-->
+        <div class="row">
+          <div class="col-2">  
+          </div>
+        <div class="col-2">
+            <div class="card" style="width: 11rem;">
+              <img src="img/ama/flash3.jpg" alt="">
+              <div class="card-body">
+                <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
+                <div class="row" style="color: green;"> 
+                  <div class="col">
+                    <h6 style="font-size:15px;">2024</h6>
+                  </div>
+                  <div class="col">
+                    <h6 style="font-size:15px;">aventure</h6>
+
+                  </div>
+                </div>
+              
+              </div>
+              </div>
+      </div>
+        <div class="col-2">
+          <div class="card" style="width: 11rem;">
+            <img src="img/ama/flash2.jpg" alt="" style="height: 7cm;">
           <div class="card-body">
             <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
             <div class="row" style="color: green;"> 
@@ -151,62 +460,11 @@
 
               </div>
             </div>
-           
+          
           </div>
           </div>
-  </div>
-    </section>
-   <!--all serie !-->
-<section id="all">
-  <div class="container-fluid modifier" >
-<div id="films" class="row">
-  <span class="border-start" style="margin-top: 10px;">
-    <h1 style="border-left: 4px solid red"> <span style="color:  rgb(252, 67, 64);">NE</span>W series</h1>
-  </span>
-    <div class="row ">
-      <div class="col-2"></div>
-      <div class="col-5 deplace">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary recup" style="border-left: 4px solid rgb(185, 19, 19)">
-            <a class="navbar-brand" href="#all"  style="background-color: rgb(252, 67, 64);">ALL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#series">Series</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#regarder">ACTION</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-      </div>
-      <div class="col"></div>
-    </div>
-   
-    <div class="col-2">  
         </div>
         <div class="col-2">
-          <div class="card" style="width: 11rem;">
-            <img src="img/ama/flash.jpg" alt="">
-            <div class="card-body">
-              <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-              <div class="row" style="color: green;"> 
-                <div class="col">
-                  <h6 style="font-size:15px;">2024</h6>
-                </div>
-                <div class="col">
-                  <h6 style="font-size:15px;">aventure</h6>
-
-                </div>
-              </div>
-             
-            </div>
-          </div>
-    </div>
-    <div class="col-2">
         <div class="card" style="width: 11rem;">
           <img src="img/ama/thor2.jpg" alt="" style="height: 7cm;">
           <div class="card-body">
@@ -220,13 +478,14 @@
 
               </div>
             </div>
-           
+          
           </div>
-    </div>
-    </div>
-    <div class="col-2">
+          </div>
+        </div>
+
+        <div class="col-2">
         <div class="card" style="width: 11rem;">
-          <img src="img/ama/flash2.jpg" alt="">
+          <img src="img/ama/flash.jpg" alt="">
           <div class="card-body">
             <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
             <div class="row" style="color: green;"> 
@@ -238,464 +497,252 @@
 
               </div>
             </div>
-           
+          
           </div>
           </div>
-    </div>
-
-    <div class="col-2">
-        <div class="card" style="width: 11rem;">
-          <img src="img/ama/flash.jpg" alt="" style="height: 7cm;">
-          <div class="card-body">
-            <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-            <div class="row" style="color: green;"> 
-              <div class="col">
-                <h6 style="font-size:15px;">2024</h6>
-              </div>
-              <div class="col">
-                <h6 style="font-size:15px;">aventure</h6>
-
-              </div>
-            </div>
-           
-          </div>
-          </div>
-    </div>
-</div>
-</div>
-<div class="modal-footer">
-  <button class="btn btn-primary" style="background-color: red; border: raduis 20px;
-   margin-right:605px;">
-    <a href="#series">PLUS DE FILMS</a></button>
-</div>
-</section>
-<!-- features series Tv !-->
-<section>
-  <div class="container-fluid modifier" >
-<div id="series" class="row">
-    <span class="border-start">
-    <h1 style="border-left: 4px solid red"> <span style="color:  rgb(252, 67, 64);">Feat</span>ures series TV</h1>
-    </span>
-    <div class="row ">
-      <div class="col-2"></div>
-      <div class="col-5 deplace">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary recup" style="border-left: 4px solid rgb(185, 19, 19)">
-            <a class="navbar-brand" href="#series" >ALL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#regarder">Acheter</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#regarder">ACTION</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-      </div>
-      <div class="col"></div>
-    </div>
-   
-    <div class="col-2">  
-        </div>
-      <div class="col-2">
-          <div class="card" style="width: 11rem;">
-            <img src="img/ama/thor.jpg" alt="" style="height: 7cm;">
-            <div class="card-body">
-              <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-              <div class="row" style="color: green;"> 
-                <div class="col">
-                  <h6 style="font-size:15px;">2024</h6>
-                </div>
-                <div class="col">
-                  <h6 style="font-size:15px;">aventure</h6>
-  
-                </div>
-              </div>
-             
-            </div>
-            </div>
-     </div>
-      <div class="col-2">
-        <div class="card" style="width: 11rem;">
-      <img src="img/ama/flash.jpg">
-        <div class="card-body">
-          <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-          <div class="row" style="color: green;"> 
-            <div class="col">
-              <h6 style="font-size:15px;">2024</h6>
-            </div>
-            <div class="col">
-              <h6 style="font-size:15px;">aventure</h6>
-
-            </div>
-          </div>
-        
-        </div>
         </div>
       </div>
-      <div class="col-2">
-      <div class="card" style="width: 11rem;">
-        <img src="img/ama/thor1.jpg" alt="" style="height: 7cm;">
-        <div class="card-body">
-          <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-          <div class="row" style="color: green;"> 
-            <div class="col">
-              <h6 style="font-size:15px;">2024</h6>
-            </div>
-            <div class="col">
-              <h6 style="font-size:15px;">aventure</h6>
-
-            </div>
-          </div>
-         
         </div>
-        </div>
-      </div>
 
-      <div class="col-2">
-      <div class="card" style="width: 11rem;">
-        <img src="img/ama/flash3.jpg" alt="">
-        <div class="card-body">
-          <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-          <div class="row" style="color: green;"> 
-            <div class="col">
-              <h6 style="font-size:15px;">2024</h6>
-            </div>
-            <div class="col">
-              <h6 style="font-size:15px;">aventure</h6>
-
-            </div>
-          </div>
-         
-        </div>
-        </div>
       </div>
-    </div>
-    <!-- plus de !-->
-     <div class="row">
-      <div class="col-2">  
-      </div>
-    <div class="col-2">
-        <div class="card" style="width: 11rem;">
-          <img src="img/ama/flash3.jpg" alt="">
-          <div class="card-body">
-            <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-            <div class="row" style="color: green;"> 
-              <div class="col">
-                <h6 style="font-size:15px;">2024</h6>
-              </div>
-              <div class="col">
-                <h6 style="font-size:15px;">aventure</h6>
-
-              </div>
-            </div>
-           
-          </div>
-          </div>
-   </div>
-    <div class="col-2">
-      <div class="card" style="width: 11rem;">
-        <img src="img/ama/flash2.jpg" alt="" style="height: 7cm;">
-      <div class="card-body">
-        <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-        <div class="row" style="color: green;"> 
-          <div class="col">
-            <h6 style="font-size:15px;">2024</h6>
-          </div>
-          <div class="col">
-            <h6 style="font-size:15px;">aventure</h6>
-
-          </div>
-        </div>
-      
-      </div>
-      </div>
-    </div>
-    <div class="col-2">
-    <div class="card" style="width: 11rem;">
-      <img src="img/ama/thor2.jpg" alt="" style="height: 7cm;">
-      <div class="card-body">
-        <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-        <div class="row" style="color: green;"> 
-          <div class="col">
-            <h6 style="font-size:15px;">2024</h6>
-          </div>
-          <div class="col">
-            <h6 style="font-size:15px;">aventure</h6>
-
-          </div>
-        </div>
-       
-      </div>
-      </div>
-    </div>
-
-    <div class="col-2">
-    <div class="card" style="width: 11rem;">
-      <img src="img/ama/flash.jpg" alt="">
-      <div class="card-body">
-        <h6 style="margin-left: 35px;  text-decoration: underline;">Avengers</h6>
-        <div class="row" style="color: green;"> 
-          <div class="col">
-            <h6 style="font-size:15px;">2024</h6>
-          </div>
-          <div class="col">
-            <h6 style="font-size:15px;">aventure</h6>
-
-          </div>
-        </div>
-       
-      </div>
-      </div>
-    </div>
-  </div>
-     </div>
-
-  </div>
-</section>
-</section>
-<!-- section shop movie !-->
-  <section>
-    <div class="container-fluid modifier">
-      <div id="row films">
-        <span class="border-start">
-          <h2 style="border-left: 4px solid red; margin-top: 5px;">SHOW MOVIES</h2>
-        </span>
-          <div class="row">
-              <div class="col-7">
-                <div class="row deviation" style="margin-right: 7px;">
-                    <div class="col-3">
-                      <div class="card" style="width: 11rem;">
-                          <img src="img/ama/thor.jpg" style="height: 3cm;">
-                          <div class="card-body">
-                            <div class="row" style="color: green;">
-                              <div class="col">Nom: Avengers</div>
-                              <div class="col">Prie:2 euros</div>
-                            </div>
+    </section>
+    <!-- section shop movie !-->
+      <section>
+        <div class="container-fluid modifier">
+          <div id="row films">
+            <span class="border-start">
+              <h2 style="border-left: 4px solid red; margin-top: 5px;">SHOW MOVIES</h2>
+            </span>
+              <div class="row">
+                  <div class="col-7">
+                    <div class="row deviation" style="margin-right: 7px;">
+                        <div class="col-3">
+                          <div class="card" style="width: 11rem;">
+                              <img src="img/ama/thor.jpg" style="height: 3cm;">
+                              <div class="card-body">
+                                <div class="row" style="color: green;">
+                                  <div class="col">Nom: Avengers</div>
+                                  <div class="col">Prie:2 euros</div>
+                                </div>
+                              </div>
                           </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card" style="width: 11rem;">
-                          <img src="img/ama/flash3.jpg" style="height: 3cm;">
-                          <div class="card-body">
-                            <div class="row" style="color: green;">
-                              <div class="col">Nom: Avengers</div>
-                              <div class="col">Prie:2 euros</div>
-                            </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="card" style="width: 11rem;">
+                              <img src="img/ama/flash3.jpg" style="height: 3cm;">
+                              <div class="card-body">
+                                <div class="row" style="color: green;">
+                                  <div class="col">Nom: Avengers</div>
+                                  <div class="col">Prie:2 euros</div>
+                                </div>
+                              </div>
                           </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card" style="width: 11rem;">
-                          <img src="img/ama/flash.jpg" style="height: 3cm;">
-                          <div class="card-body">
-                            <div class="row" style="color: green;">
-                              <div class="col">Nom: Avengers</div>
-                              <div class="col">Prie:2 euros</div>
-                            </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="card" style="width: 11rem;">
+                              <img src="img/ama/flash.jpg" style="height: 3cm;">
+                              <div class="card-body">
+                                <div class="row" style="color: green;">
+                                  <div class="col">Nom: Avengers</div>
+                                  <div class="col">Prie:2 euros</div>
+                                </div>
+                              </div>
                           </div>
-                      </div>
+                        </div>
+                        
+                        <div class="col-3">
+                          <div class="card" style="width: 11rem;">
+                              <img src="img/ama/thor1.jpg" style="height: 3cm;">
+                              <div class="card-body">
+                                <div class="row" style="color: green;">
+                                  <div class="col">Nom: Avengers</div>
+                                  <div class="col">Prie:2 euros</div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
                     </div>
                     
-                    <div class="col-3">
-                      <div class="card" style="width: 11rem;">
-                          <img src="img/ama/thor1.jpg" style="height: 3cm;">
-                          <div class="card-body">
-                            <div class="row" style="color: green;">
-                              <div class="col">Nom: Avengers</div>
-                              <div class="col">Prie:2 euros</div>
+                    <div class="row deviation" style="margin-right: 7px;">
+                      <div class="col-3">
+                        <div class="card" style="width: 11rem;">
+                            <img src="img/ama/flash1.jpg"  style="height: 3cm;">
+                            <div class="card-body">
+                              <div class="row" style="color: green;">
+                                <div class="col">Nom: Avengers</div>
+                                <div class="col">Prie:2 euros</div>
+                              </div>
                             </div>
-                          </div>
+                        </div>
                       </div>
-                    </div>
+                      <div class="col-3">
+                        <div class="card" style="width: 11rem;">
+                            <img src="img/ama/flash2.jpg" style="height: 3cm;">
+                            <div class="card-body">
+                              <div class="row" style="color: green;">
+                                <div class="col">Nom: Avengers</div>
+                                <div class="col">Prie:2 euros</div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card" style="width: 11rem;">
+                            <img src="img/ama/thor.jpg" style="height: 3cm;">
+                            <div class="card-body">
+                              <div class="row" style="color: green;">
+                                <div class="col">Nom: Avengers</div>
+                                <div class="col">Prie:2 euros</div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card" style="width: 11rem;" >
+                            <img src="img/ama/flash.jpg" alt="" style="height: 3cm">
+                            <div class="card-body">
+                              <div class="row" style="color: green;">
+                                <div class="col">Nom: Avengers</div>
+                                <div class="col">Prie:2 euros</div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      
+                  </div>  
+                      
                 </div>
-                
-                <div class="row deviation" style="margin-right: 7px;">
-                  <div class="col-3">
-                    <div class="card" style="width: 11rem;">
-                        <img src="img/ama/flash1.jpg"  style="height: 3cm;">
-                        <div class="card-body">
-                          <div class="row" style="color: green;">
-                            <div class="col">Nom: Avengers</div>
-                            <div class="col">Prie:2 euros</div>
-                          </div>
-                        </div>
-                    </div>
+                  <div class="col-4 imagef"  id="regarder">
+                    <iframe width="695" height="391" src="https://www.youtube.com/embed/eIWs2IUr3Vs?list=PLRbEhzXIcjiivl6Z-2MgUYIQ98cj4UL8E" title="Avengers : Infinity War - Bande-annonce officielle (VF)" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
-                  <div class="col-3">
-                    <div class="card" style="width: 11rem;">
-                        <img src="img/ama/flash2.jpg" style="height: 3cm;">
-                        <div class="card-body">
-                          <div class="row" style="color: green;">
-                            <div class="col">Nom: Avengers</div>
-                            <div class="col">Prie:2 euros</div>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="card" style="width: 11rem;">
-                        <img src="img/ama/thor.jpg" style="height: 3cm;">
-                        <div class="card-body">
-                          <div class="row" style="color: green;">
-                            <div class="col">Nom: Avengers</div>
-                            <div class="col">Prie:2 euros</div>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="card" style="width: 11rem;" >
-                        <img src="img/ama/flash.jpg" alt="" style="height: 3cm">
-                        <div class="card-body">
-                          <div class="row" style="color: green;">
-                            <div class="col">Nom: Avengers</div>
-                            <div class="col">Prie:2 euros</div>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                  
-              </div>  
-                  
-            </div>
-              <div class="col-4 imagef"  id="regarder">
-                <iframe width="695" height="391" src="https://www.youtube.com/embed/eIWs2IUr3Vs?list=PLRbEhzXIcjiivl6Z-2MgUYIQ98cj4UL8E" title="Avengers : Infinity War - Bande-annonce officielle (VF)" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
               </div>
-            </div>
-          </div>
-    </div>
-  </section>
-  <!-- section fomulaire !-->
-  <section id="contact">
-    <div class="container modifiers" style="border: 2px solid rgb(17, 19, 18);  background-color: rgb(228, 182, 122); margin-top: 10px;">
-        <div id="films">
-          <span class="border-start">
-            <h2 style="border-left: 4px solid red">CONTACT US</h2>
-          </span>
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">message</label>
-              <input type="text" class="form-control" id="message" style="height:10vh;">
-            </div>
-            <button type="submit" class="btn btn-success">Send message</button>
-          </form>
         </div>
-    </div>
-  </section>
-  
-
-  <script>
-</script>
-
-<section class="clignote">
-  <div class="container action">
-    <div class="row">
-      <div class="col-1">
-        <img src="img/ama/cookie.jpg">
-      </div>
-      <div class="col-2">
-        <h4>Cookies</h4>  
-
-      </div>
-
-    </div>
-    <p >Voules-vous avoir plus d'information sur nos produit et reductions pendant<br>   les periode de promos</p>
-    <button class="btn btn-success btn10">accepter</button><button class="btn btn-danger btn11">refuser</button>
-  </div>
-   <!-- style du cookies-->
-   <style> 
-    .action{
-      position: fixed; 
-      top: 53%;
-      left: -40%; 
-      z-index: 1; 
-      padding: 10px; 
-    }
-    .action h5{
-      color: rgb(0, 0, 0);
-      font-size: 0.5cm;
-    }
-    .active{
-      left:0%;
-    }
-    .action h4 {
-     margin-left:  3cm;
-     color: rgb(0, 0, 0);
-     font-size: 0.8cm;
-    }
-    .action img{
-      width: 100px;
-      border-radius: 1cm;
-    }
-    .action{
-      background-color:  rgb(255, 255, 255);
-      width: 7cm;
-      border-radius: 1cm;
+      </section>
+      <!-- section fomulaire !-->
+      <section id="contact">
+        <div class="container modifiers" style="border: 2px solid rgb(17, 19, 18);  background-color: rgb(228, 182, 122); margin-top: 10px;">
+            <div id="films">
+              <span class="border-start">
+                <h2 style="border-left: 4px solid red">CONTACT US</h2>
+              </span>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">message</label>
+                  <input type="text" class="form-control" id="message" style="height:10vh;">
+                </div>
+                <button type="submit" class="btn btn-success">Send message</button>
+              </form>
+            </div>
+        </div>
+      </section>
       
+      <!-- section cookie !-->
+
+    <section class="cookies">
+      <div class="container action">
+        <div class="row">
+          <div class="col-1">
+            <img src="img/ama/cookie.jpg">
+          </div>
+          <div class="col-2">
+            <h4>Cookies</h4>  
+
+          </div>
+
+        </div>
+        <p >Voules-vous avoir plus d'information sur nos produit et reductions pendant<br>   les periode de promos</p>
+        <button class="btn btn-success btn10">accepter</button><button class="btn btn-danger btn11">refuser</button>
+      </div>
+      <!-- style du cookies-->
+      <style> 
+        .action{
+          position: fixed; 
+          top: 53%;
+          left: -40%; 
+          z-index: 1; 
+          padding: 10px; 
+        }
+        .action h5{
+          color: rgb(0, 0, 0);
+          font-size: 0.5cm;
+        }
+        .active{
+          left:0%;
+        }
+        .action h4 {
+        margin-left:  3cm;
+        color: rgb(0, 0, 0);
+        font-size: 0.8cm;
+        }
+        .action img{
+          width: 100px;
+          border-radius: 1cm;
+        }
+        .action{
+          background-color:  rgb(255, 255, 255);
+          width: 7cm;
+          border-radius: 1cm;
+          
+        }
+        .action .btn10{
+        margin-left: 0.5cm;
+        }
+        .action .btn11{
+          margin-left: 0.5cm;
+          }    
+          
+          .clignotant {
+            animation:clinfinite; 
+          }
+      </style>
+      <!-- script du cookies-->
+    <script>
+    const cokie =document.querySelector('.action')
+          btn10 = document.querySelector('.btn10')
+          btn11 = document.querySelector('.btn11')
+          window.addEventListener('load',()=>{
+          cokie.classList.add('active');
+          btn10.addEventListener('click',()=>{
+            cokie.classList.remove('active');
+            localStorage.setItem('mange',50);
+            localStorage.setItem('banane',5100);
+          })
+          btn11.addEventListener('click',()=>{
+            cokie.classList.remove('active');
+          })
+        })
+        function changer() {
+        const image = document.querySelector('.debut1'); 
+        
+        setTimeout(() => {
+            image.classList.remove('debut1'); 
+            image.classList.add('debut3'); 
+        }, 3000); 
+
+        setTimeout(() => {
+            image.classList.remove('debut3'); 
+            image.classList.add('debut2'); 
+        }, 6000); 
+        setTimeout(() => {
+          image.classList.remove('debut2'); 
+          image.classList.add('debut1'); 
+      }, 9000); 
     }
-    .action .btn10{
-    margin-left: 0.5cm;
-    }
-    .action .btn11{
-      margin-left: 0.5cm;
-      }    
+
+    changer(); 
       
-      .clignotant {
-        animation:clinfinite; 
-      }
-  </style>
-  <!-- script du cookies-->
- <script>
-const cokie =document.querySelector('.action')
-      btn10 = document.querySelector('.btn10')
-      btn11 = document.querySelector('.btn11')
-      window.addEventListener('load',()=>{
-      cokie.classList.add('active');
-      btn10.addEventListener('click',()=>{
-        cokie.classList.remove('active');
-        localStorage.setItem('mange',50);
-        localStorage.setItem('banane',5100);
-      })
-      btn11.addEventListener('click',()=>{
-        cokie.classList.remove('active');
-      })
-    })
-    function changer() {
-    const image = document.querySelector('.debut1'); 
-    
-    setTimeout(() => {
-        image.classList.remove('debut1'); 
-        image.classList.add('debut3'); 
-    }, 3000); 
 
-    setTimeout(() => {
-        image.classList.remove('debut3'); 
-        image.classList.add('debut2'); 
-    }, 6000); 
-    setTimeout(() => {
-      image.classList.remove('debut2'); 
-      image.classList.add('debut1'); 
-  }, 9000); 
-}
-
-changer(); 
-  
-
- </script>
- </section> 
+    </script>
+    </section> 
+</section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
       crossorigin="anonymous">
